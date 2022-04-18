@@ -12,13 +12,13 @@
         <form action="" method="post" name="tipform" onsubmit="event.preventDefault(); cal();">
             <div>
                 <label for="amount">Bill Amount : </label>
-                <input type="text"  caption="Enter the Bill amount : " id="amount" 
+                <input type="text"  caption="Enter the Bill amount : " id="amount"  oninput="onChangeSum(this)"
                 >
             </div>
             
             <div>
                 <label for="amount">Enter the Percent for the Tip : </label>
-                <input type="Enter the tip : " id="percent" >
+                <input type="Enter the tip : " id="percent"  oninput="onChangeTip(this)">
             </div>
 
             <div><label for="">Tip Value : </label>
@@ -34,6 +34,14 @@
     </div>    
 
     <script>
+        function onChangeSum(element){
+            console.log(element.value);
+            cal();
+        }
+        function onChangeTip(element){
+            console.log(element.value);
+            cal();
+        }
         
         function cal(){   
             var val =0;
